@@ -1,6 +1,6 @@
 # Create your views here.
 
-from django.shortcuts import rnder_to_response
+from django.shortcuts import render_to_response
 
 def homepage(request):
 #    return HttpResponse('Bem vindo ao EventeX!')
