@@ -1,5 +1,3 @@
-# Django settings for eventex project.
-
 import os
 PROJECT_DIR = os.path.dirname(__file__)
 
@@ -23,6 +21,10 @@ DATABASES = {
     }
 }
 
+DEFAULT_FROM_EMAIL = 'contato@eventex.com'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
@@ -30,11 +32,11 @@ DATABASES = {
 # timezone as the operating system.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = 'America/Chicago'
+TIME_ZONE = 'America/Sao_Paulo'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-br'
 
 SITE_ID = 1
 
@@ -67,7 +69,7 @@ SECRET_KEY = 'rclkre-&5sknt8@f65u!jp&1vwu(-_nobr0gj1oa_@c(q@#)nc'
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
-# 'django.template.loaders.eggs.Loader',
+#     'django.template.loaders.eggs.Loader',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -97,8 +99,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+    'south',
     'core',
     'subscription',
 )
-
-
